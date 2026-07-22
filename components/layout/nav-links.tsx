@@ -1,5 +1,9 @@
-
+'use client';
 import Link from 'next/link';
+import HamburgerBtn from '../ui/hamburderBtn';
+import { useState } from "react";
+import { dancingScript } from "../ui/fonts";
+
 
 const links = [
     {
@@ -40,22 +44,37 @@ const links = [
     },
   ];
 
+//flex flex-col gap-4 from link
+  
   export default function MobileNavlinks(){
+      const [isOpen, setIsOpen] = useState(false);
+
     return(
         <>
+<HamburgerBtn
+isOpen={isOpen}
+onClick={()=>setIsOpen(!isOpen)}
+/>
+
+{isOpen && (
+    <nav className="mt-6 flex flex-col gap-4">
  {links.map((link) => {
 
         return (
           <Link
-            key={link.title}
+            key={link.href}
             href={link.href}
-            className="flex flex-col gap-4"
+            onClick={()=>setIsOpen(false)}
+            className={`${dancingScript.className } text-lg font-medium text-[#FAF9F6 ]`}
           >
 
-            <p className=" md:hidden">{link.title}</p>
+        {link.title}
           </Link>
         );
       })}
+
+    </nav>
+)}
         </>
     )
   }
