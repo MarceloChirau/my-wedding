@@ -51,13 +51,16 @@ const links = [
 
     return(
         <>
+        <div className='md:hidden'>
 <HamburgerBtn
 isOpen={isOpen}
 onClick={()=>setIsOpen(!isOpen)}
 />
 
-{isOpen && (
-    <nav className="mt-6 flex flex-col gap-4">
+        </div>
+
+{/* {isOpen && ( */}
+    <nav className={`${isOpen ?'flex flex-col ' : 'hidden' } text-olive-500  mt-6 gap-4 absolute md:static  md:flex md:flex-row md:gap-4`}>
  {links.map((link) => {
 
         return (
@@ -65,7 +68,7 @@ onClick={()=>setIsOpen(!isOpen)}
             key={link.href}
             href={link.href}
             onClick={()=>setIsOpen(false)}
-            className={`${dancingScript.className } text-lg font-medium text-[#FAF9F6 ]`}
+            className={`${dancingScript.className }  text-lg font-medium text-[#FAF9F6 ]`}
           >
 
         {link.title}
@@ -74,7 +77,7 @@ onClick={()=>setIsOpen(!isOpen)}
       })}
 
     </nav>
-)}
+ {/* )}  */}
         </>
     )
   }

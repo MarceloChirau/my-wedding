@@ -16,7 +16,7 @@ export default function HamburgerBtn({isOpen,onClick}:hamburgerBtnProps) {
     >
       <span
         className={`
-          absolute h-1 w-8 rounded-full bg-black
+          absolute h-1 w-8 rounded-full bg-olive-500
           transition-all duration-300
           ${isOpen ? "rotate-45" : "-translate-y-2"}
         `}
@@ -24,7 +24,7 @@ export default function HamburgerBtn({isOpen,onClick}:hamburgerBtnProps) {
 
       <span
         className={`
-          absolute h-1 w-8 rounded-full bg-black
+          absolute h-1 w-8 rounded-full bg-olive-500
           transition-all duration-300
           ${isOpen ? "opacity-0" : "opacity-100"}
         `}
@@ -32,7 +32,7 @@ export default function HamburgerBtn({isOpen,onClick}:hamburgerBtnProps) {
 
       <span
         className={`
-          absolute h-1 w-8 rounded-full bg-black
+          absolute h-1 w-8 rounded-full bg-olive-500
           transition-all duration-300
           ${isOpen ? "-rotate-45" : "translate-y-2"}
         `}
