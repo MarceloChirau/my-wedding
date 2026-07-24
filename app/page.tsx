@@ -3,6 +3,11 @@ import  MobileNavlinks from '../components/layout/nav-links'
 import { dancingScript } from "../components/ui/fonts";
 import CountDown from "../components/ui/countdown";
 import Image from 'next/image';
+import Link from 'next/link';
+import Annoucements from '../components/ui/announcements';
+import EventsSnapshot from '../components/ui/eventsSnapshot';
+import LiveAttendance from '../components/ui/liveAttendance';
+import ImageCarousel from '../components/ui/imageCarousel';
 
 
      {/* <div className="flex flex-col flex-1 items-center justify-center "> */}
@@ -32,12 +37,21 @@ height={3648}
 className='w-full h-auto md:w-4/5'
 ></Image>
 </section>
-  <div className='flex flex-row justify-center w-[4/5] my-4' >
+
 <CountDown/>
-  </div>
+<Link
+href='/rsvp'
+className=' animate-pulse rounded-full bg-olive-500 px-8 py-3 mt-3 mx-auto flex flex-row justify-center w-1/4 md:w-1/8 text-white'>RSVP</Link>
+
+<Annoucements/>
+<EventsSnapshot/>
+<LiveAttendance/>
+<ImageCarousel/>
+
   </>
 
 
 
   );
 }
+//Thank you for your response! We look forward to seeing you..
