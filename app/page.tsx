@@ -1,7 +1,9 @@
 
 import  MobileNavlinks from '../components/layout/nav-links'
-
 import { dancingScript } from "../components/ui/fonts";
+import CountDown from "../components/ui/countdown";
+import Image from 'next/image';
+
 
      {/* <div className="flex flex-col flex-1 items-center justify-center "> */}
       /* <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between   sm:items-start"> */
@@ -17,8 +19,22 @@ export default function Home() {
 </div>
 </div>
 
+<div className={`${dancingScript.className} text-2xl flex fex-row justify-center`} >
+  <h2>Marko & Lucja are getting married! </h2>
+</div>
 
-  
+<section className='flex justify-center py-4' >
+<Image
+src='/corberon-horizontal.JPG'
+alt='Hero image'
+width={5472}
+height={3648}
+className='w-full h-auto md:w-4/5'
+></Image>
+</section>
+  <div className='flex flex-row justify-center w-[4/5] my-4' >
+<CountDown/>
+  </div>
   </>
 
 
