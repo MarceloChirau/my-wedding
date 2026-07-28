@@ -8,7 +8,7 @@ import Annoucements from '../components/ui/announcements';
 import EventsSnapshot from '../components/ui/eventsSnapshot';
 import LiveAttendance from '../components/ui/liveAttendance';
 import ImageCarousel from '../components/ui/imageCarousel';
-
+import {Button} from '@/components/ui/button';
 
      {/* <div className="flex flex-col flex-1 items-center justify-center "> */}
       /* <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between   sm:items-start"> */
@@ -47,6 +47,10 @@ className=' animate-pulse rounded-full bg-olive-500 px-8 py-3 mt-3 mx-auto flex 
 <EventsSnapshot/>
 <LiveAttendance/>
 <ImageCarousel/>
+<div className="flex-min-h-svh items-center justify-center bg-gray-700">
+
+<Button/>
+</div>
 
   </>
 
